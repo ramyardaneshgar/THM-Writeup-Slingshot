@@ -21,7 +21,7 @@
    This displayed all requests grouped by their originating IP addresses.
 4. Sorted the data by request volume to find the top contributors.
 
-### Insights:
+
 - The IP `10.0.2.15` emerged as the attacker’s IP, generating a significantly higher number of requests than any other source.
 - High request volume is often indicative of reconnaissance or automated tools, both of which generate numerous queries.
 
@@ -47,7 +47,7 @@
    Nmap Scripting Engine
    ```
 
-### Insights:
+
 - The attacker used **Nmap’s Scripting Engine**, a well-known reconnaissance tool.
 - Nmap enables attackers to map open ports, services, and potentially exploitable configurations.
 - Early usage of Nmap indicates an attempt to profile the server before executing any targeted attacks.
@@ -76,7 +76,7 @@
    ```
 4. Gobuster is a brute-force tool often used for directory enumeration, probing for hidden files and directories on web servers.
 
-### Insights:
+
 - The attacker systematically enumerated directories using **Gobuster**.
 - This step is typically used to uncover admin panels, configuration files, or upload endpoints.
 
@@ -97,7 +97,7 @@
    ```
 2. Reviewed the entries to quantify failed attempts to access non-existent resources.
 
-### Insights:
+
 - The high number of 404 errors (**1,867**) suggested extensive probing by the attacker, testing directories and endpoints.
 
 ### Outcome:
@@ -118,7 +118,7 @@
 2. Analyzed directories accessed during enumeration.
 3. Identified a hidden directory containing a flag.
 
-### Insights:
+
 - The flag (`a76637b62ea99acda12f5859313f539a`) demonstrated the attacker’s success in discovering sensitive information.
 
 ### Outcome:
@@ -135,7 +135,7 @@
 1. Continued analyzing `200` status responses and noticed repeated access to `/admin-login.php`.
 2. Cross-referenced this with Gobuster logs to confirm discovery during enumeration.
 
-### Insights:
+
 - Identifying `/admin-login.php` suggested the attacker now had a specific target for exploitation.
 
 ### Outcome:
@@ -159,7 +159,7 @@
    ```
 3. Noted the successful login attempt.
 
-### Insights:
+
 - The attacker used **Hydra**, a brute-force tool, to repeatedly try different credentials.
 - Successful login credentials were identified as `admin:thx1138`.
 
@@ -184,7 +184,7 @@
    THM{ecb012e53a58818cbd17a924769ec447}
    ```
 
-### Insights:
+
 - The uploaded web shell allowed remote execution of commands on the compromised server.
 
 ### Outcome:
