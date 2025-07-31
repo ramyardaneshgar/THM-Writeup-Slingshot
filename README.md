@@ -1,6 +1,6 @@
 
-# **THM-Writeup-Slingshot**  
-**Writeup for TryHackMe Slingshot Lab - performing forensic log analysis using the ELK stack to reconstruct an attacker's kill chain, identify exploited vulnerabilities, and extract critical indicators of compromise (IOCs).**  
+#Forensic log analysis using the ELK stack 
+Performing forensic log analysis using the ELK stack to reconstruct an attacker's kill chain, identify exploited vulnerabilities, and extract critical indicators of compromise (IOCs).**  
 
 **By Ramyar Daneshgar**  
 
